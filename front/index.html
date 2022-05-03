@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        .container section {
+            width: 48%;
+            height: 100%;
+        }
+        
+        .container section:first-child {
+            border-right: 3px solid #369;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        table td {
+            text-align: center;
+        }
+        
+        form p {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <h3>Add User</h3>
+            <form id="form">
+                <p>User name:</p>
+                <input type="text" name="name" />
+                <p>Age:</p>
+                <input type="number" name="age" />
+                <p>Email:</p>
+                <input type="text" name="mail" />
+                <p>Size:</p>
+                <input type="number" name="size" />
+                <p>Password:</p>
+                <input type="password" name="pwd" />
+                <p></p>
+                <button type="button" id="addUserBtn">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h3>User List</h3>
+            <table border="1" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody id="userList"></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
